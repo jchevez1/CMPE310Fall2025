@@ -1,0 +1,26 @@
+objective: asks the user for two input strings and computes the Hamming distance between the two strings
+
+    // this is the maximum accepted input length of the string
+    The max length is going to be 255 characters                          
+
+    // these ask the user to input two strings
+    input "Please enter first string: "          
+    Input "Please enter second string: "
+
+    // compare only up to the shorter string, n is the number of characters we'll compare
+    Set n to MIN(LENGTH(string1), LENGTH(string2))                  
+    Set total to 0                                        
+
+    // loop over each character
+    for i from 0 to n−1 do the following                             
+        p = byte(string1[i]) 
+        q = byte(string2[i])
+        compare (p xor q), and save it to x  
+        whenever x is 1:
+        total = total + 1:
+    end
+    return total:        
+
+    // output the final distance
+    output "The Hamming distance is: ", total               
+end of the program

@@ -1,0 +1,24 @@
+objective: opens a text file, reads the first integer, then reads the next integers, stores them in an array and computes their sum
+
+    // this is the maximum accepted number of integers in the file
+    The maximum count is going to be 1000 integers                                   
+
+    // read the first integer in the file as n, n is the count of numbers to read
+    // limit n to at most 1000
+    Set n to the FIRST_INTEGER_IN_THE_FILE
+    If n > 1000 then set n = 1000
+    If n < 1 then set n = 0
+    Create an integer array A of size 1000
+    Set sum to 0                                        
+
+    // loop over the next n integers
+    for i from 0 to n−1 do the following                             
+        value = NEXT_INTEGER_IN_THE_FILE
+        A[i] = value
+        sum = sum + value:
+    end
+    return sum:        
+
+    // output the final sum
+    output "", sum
+end of the program               
